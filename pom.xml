@@ -13,11 +13,7 @@
 	
 	<description>Maven Web Project</description>
 
-	<!-- <organization>
-		<name>Mithun Technologies</name>
-		<url>http://mithuntechnologies.com/</url>
-	</organization> -->
-
+	
 	<properties>
 		<!-- versions -->
 		
@@ -99,18 +95,18 @@
 
 	</dependencies>
 	
-	<!-- <distributionManagement>
+	 <distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <name>Nexus Repository</name>
 	      <url>http://13.235.8.113:8081/repository/flipkart-release/</url>
 	    </repository>
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <name> Nexus Repository </name>
 	      <url>http://13.235.8.113:8081/repository/flipkart-snapshot/</url>
 	    </snapshotRepository>
-	</distributionManagement> -->
+	</distributionManagement> 
 	
 	<build>
 		<plugins>
@@ -130,16 +126,16 @@
 	
 <profiles>
 <profile>
-<id>sonar</id>
-<activation>
-<activeByDefault>true</activeByDefault>
-</activation>
-<properties>
-<!-- Optional URL to server. Default value is http://localhost:9000 -->
-<sonar.host.url>
-http://localhost:9090
-</sonar.host.url>
-</properties>
+	<id>sonar</id>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+	<properties>
+	<!-- Optional URL to server. Default value is http://localhost:9000 -->
+		<sonar.host.url>
+		http://localhost:9090
+		</sonar.host.url>
+	</properties>
 </profile>
 </profiles>
 	
