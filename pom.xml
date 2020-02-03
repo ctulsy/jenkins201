@@ -1,3 +1,4 @@
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -7,15 +8,15 @@
 	<packaging>war</packaging>
 	<version>1.0</version>
 	
-	<name>Maven Web Application</name>
-	<url>http://mithuntechnologies.com</url>
+	<name>Jenkins 201</name>
+	
 	
 	<description>Maven Web Project</description>
 
-	<organization>
+	<!-- <organization>
 		<name>Mithun Technologies</name>
 		<url>http://mithuntechnologies.com/</url>
-	</organization>
+	</organization> -->
 
 	<properties>
 		<!-- versions -->
@@ -125,6 +126,21 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	
+	
+<profiles>
+<profile>
+<id>sonar</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<!-- Optional URL to server. Default value is http://localhost:9000 -->
+<sonar.host.url>
+http://localhost:9090
+</sonar.host.url>
+</properties>
+</profile>
+</profiles>
 	
 </project>
